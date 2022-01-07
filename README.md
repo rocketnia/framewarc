@@ -1,5 +1,7 @@
 # Framewarc
 
+[![CI](https://github.com/rocketnia/framewarc/actions/workflows/ci.yml/badge.svg)](https://github.com/rocketnia/framewarc/actions/workflows/ci.yml)
+
 Framewarc is an experimental system for writing portable code in the Arc programming language, in two related senses:
 
 * Code that works across multiple Arc implementations.
