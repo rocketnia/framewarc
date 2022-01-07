@@ -1,6 +1,5 @@
 {
   "name": "framewarc",
-  "private": true,
   "version": "0.1.0",
   "description": "A module system and various libraries for portable Arc programming.",
   "scripts": {
@@ -24,7 +23,18 @@
     "url": "https://github.com/rocketnia/framewarc/issues"
   },
   "homepage": "https://github.com/rocketnia/framewarc#readme",
+  "bin": "./framewarc-node-cli.mjs",
+  "files": [
+    "/arc/**",
+    "/framewarc-node-cli.mjs",
+    "/LICENSE.txt",
+    "/README.md"
+  ],
   "devDependencies": {
     "rainbow-js-arc": "^0.2.0"
+  },
+  "dependencies": {
+    "commander": "^8.3.0",
+    "fs-extra": "^10.0.0"
   }
 }

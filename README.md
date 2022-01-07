@@ -103,6 +103,36 @@ If you're making an Arc application that uses Framewarc libraries, that should b
 If instead you're making a library, then you can continue using `use-rels-as` like this, but as long as you're using Framewarc already, you might consider making your library into a module. Take a look at a few of the modules included with Framewarc to see how to do that.
 
 
+## Loading the examples
+
+To load non-module files that use Framewarc, such as the Framewarc examples, use `loadfromwd` like so:
+
+```racket
+(loadfromwd:+ fwarc-dir* "examples/iter-demo.arc")
+```
+
+The Framewarc `loadfromwd` procedure is like `load`, but it sets the value of `load-dir*` so the file can refer to other files by relative paths.
+
+
+## Installation with npm
+
+Framewarc is also an npm package. This may make it easier to install and automate usage of Framewarc, despite the fact that it isn't a JavaScript library.
+
+As an npm package, Framewarc has no JavaScript functionality (so no `require("framewarc")`), but it does have a single piece of CLI functionality: The command `framewarc copy-into <path>` copies Framewarc's Arc source files (the arc/ directory) into the given file path. This can be combined with [Rainbow.js](https://github.com/arclanguage/rainbow-js)'s CLI functionality to build a host directory with Rainbow.js's core Arc libraries and Framewarc in its `lib/` directory: `rainbow-js-arc init-arc my-arc-host-dir/ && framewarc copy-into my-arc-host-dir/lib/framewarc/`. Once you have these files in place, keep in mind that you'll still need to run `(= fwarc-dir* "lib/framewarc/")` and `(load:+ fwarc-dir* "loadfirst.arc")` to load Framewarc.
+
+If you'd like to invoke the `framewarc copy-into <url>` command yourself from the command line, install framewarc globally:
+
+```bash
+npm install --global framewarc
+```
+
+If you'd just like to use it from your own package.json file's testing scripts, you can write the following to add it to your `devDependencies`:
+
+```bash
+npm install --save-dev framewarc
+```
+
+
 ## Naming and history of the Framewarc project
 
 Framewarc was originally called Lathe, a library named for its ability to *smooth out* various languages' rough edges in the pursuit of smoother overall programming language designs. The Lathe repository started out with a module system and libraries for Arc, basically as a dumping ground for Rocketnia's Arc programming projects. Then, Lathe branched out into having libraries for JavaScript and Racket as well as Rocketnia did more in those languages. The monorepo approach was originally justified by the potential that certain Lathe features might end up being bridges between multiple languages, but that never actually turned out to be the case.

@@ -13,7 +13,7 @@ jobs:
         #
         #
         # Version 14.8.0 added top-level `await` support by default,
-        # which we use in build.mjs.
+        # which we use in framewarc-node-cli.mjs.
         #
         # Versions 14.18.1 and 16.13.0 are the two most recent LTS
         # versions at the time of writing, and we intend to support
