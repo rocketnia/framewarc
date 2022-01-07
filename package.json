@@ -9,7 +9,7 @@
     "build": "npm run build-arc-host-dir",
     "build-arc-host-dir": "rainbow-js-arc init-arc build/test/arc/ && mkdir -p build/test/arc/lib/ && cp -r arc build/test/arc/lib/framewarc",
     "repl": "cd build/test/arc/ && rainbow-js-arc run-compat -e '(= fwarc-dir* \"lib/framewarc/\")' '(load:+ fwarc-dir* \"loadfirst.arc\")'",
-    "test": "cd build/test/arc/ && rainbow-js-arc run-compat -e '(= fwarc-dir* \"lib/framewarc/\" fwarc-test-status* 1)' '(do (load:+ fwarc-dir* \"loadfirst.arc\") (= fwarc-test-status* 0))' '(when (iso 1 fwarc-test-status*) quit.1)' '(each file (list \"examples/multirule-demo.arc\") (= fwarc-test-status* 1) (eval `(use-rels-as ,(uniq) ,(+ fwarc-dir* file))) (= fwarc-test-status* 0))' 'quit.fwarc-test-status*'"
+    "test": "cd build/test/arc/ && rainbow-js-arc run-compat -e '(= fwarc-dir* \"lib/framewarc/\" fwarc-test-status* 1)' '(do (load:+ fwarc-dir* \"loadfirst.arc\") (= fwarc-test-status* 0))' '(when (iso 1 fwarc-test-status*) quit.1)' '(each file `(iter-demo jvm-demo module-demo multirule-demo patmac-demo secretarg-demo) (= fwarc-test-status* 1) (loadfromwd:+ fwarc-dir* \"examples/\" file \".arc\") (= fwarc-test-status* 0))' 'quit.fwarc-test-status*'"
   },
   "repository": {
     "type": "git",
