@@ -281,14 +281,14 @@
 ; Very common: cons fn int mac string sym table
 ; Less common: char exception input num output socket thread
 ;
-; Types Lathe cares about from Rainbow: java-object
+; Types Framewarc cares about from Rainbow: java-object
 ;
-; Lathe tagged types: my.lazylist pm.patmac dy.param dy.secretarg
+; Framewarc tagged types: my.lazylist pm.patmac dy.param dy.secretarg
 ; wk.weqtable fc.function-failure fc.rulebook-failure (where pm is
 ; patmac.arc, dy is dyn.arc, wk is weak.arc, and fc is failcall.arc)
 ;
-; Lathe handles other kinds of data structures, but these are the only
-; type names seen using 'type. Other values are untyped ad-hoc
+; Framewarc handles other kinds of data structures, but these are the
+; only type names seen using 'type. Other values are untyped ad-hoc
 ; structures or else under an alternate convention such as
 ; (obj type 'compiled-dependency ...).
 

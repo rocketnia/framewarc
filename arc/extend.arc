@@ -13,8 +13,8 @@
 ;
 ; This library is useful for extending Arc functions that already
 ; exist. If you're making a new definition and you want to make it
-; extensible or write it in multiple parts, Lathe's multival support
-; is another option worth considering.
+; extensible or write it in multiple parts, Framewarc's multival
+; support is another option worth considering.
 
 (packed:using-rels-as ut "utils.arc"
 

@@ -1,6 +1,6 @@
 ; more-module-stuff.arc
 ;
-; This is a collection of utilities for use with the Lathe module
+; This is a collection of utilities for use with the Framewarc module
 ; system loaded by loadfirst.arc.
 ;
 ; These were originally part of the module system proper, but it
@@ -11,7 +11,7 @@
 ; If you especially like these utilities, you can place them in the
 ; global namespace yourself by running this command:
 ;
-;   (activate `(rel ,(+ lathe-dir* "more-module-stuff.arc")))
+;   (activate `(rel ,(+ fwarc-dir* "more-module-stuff.arc")))
 ;
 ; Actually, 'activate itself could be placed in this module too, but
 ; if it were here, it would be slightly more difficult to accomplish

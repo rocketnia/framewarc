@@ -231,9 +231,9 @@
 ; argument.
 ;
 ; By default, core Arc utilities like 'apply and 'memo aren't prepared
-; for secretargs. Neither are most Lathe utilities. To partially make
-; up for that, we provide my!secretarg-aware-apply. Other utilities
-; need to be similarly redefined as they're needed.
+; for secretargs. Neither are most Framewarc utilities. To partially
+; make up for that, we provide my!secretarg-aware-apply. Other
+; utilities need to be similarly redefined as they're needed.
 
 (= my.passing-secretargs* my.make-param.nil)
 (= my.secretargs* (my.make-param))

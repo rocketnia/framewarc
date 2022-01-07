@@ -2,8 +2,8 @@
 ;
 ; Use this as follows, replacing the specific path as necessary:
 ;
-; (= lathe-dir* "lib/lathe/")
-; (load:+ lathe-dir* "loadfirst.arc")
+; (= fwarc-dir* "lib/framewarc/")
+; (load:+ fwarc-dir* "loadfirst.arc")
 ;
 ; The global variable is necessary; it's what this file uses to know
 ; where to load from.
@@ -19,4 +19,4 @@
 ; incomplete and broken.
 ;
 (each file '(modulemisc once nspace import package path)
-  (load:string lathe-dir* 'modules/ file '.arc))
+  (load:string fwarc-dir* 'modules/ file '.arc))
