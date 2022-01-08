@@ -1,6 +1,6 @@
 {
   "name": "framewarc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A module system and various libraries for portable Arc programming.",
   "scripts": {
     "all": "npm run clean && npm run build && npm test",
@@ -28,7 +28,6 @@
     "/arc/**",
     "/framewarc-node-cli.mjs",
     "/LICENSE.txt",
-    "/package.json",
     "/README.md"
   ],
   "devDependencies": {

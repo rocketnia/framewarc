@@ -6,9 +6,9 @@ import $url from "url";
 import commander from "commander";
 import fse from "fs-extra";
 
-const pkg = await fse.readJson("./package.json", "utf8");
-
 const __dirname = $path.dirname($url.fileURLToPath(import.meta.url));
+
+const pkg = await fse.readJson($path.join(__dirname, "package.json"), "utf8");
 
 
 const program = new commander.Command();
