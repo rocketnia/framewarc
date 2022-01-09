@@ -118,9 +118,9 @@ The Framewarc `loadfromwd` procedure is like `load`, but it sets the value of `l
 
 Framewarc is also an npm package. This may make it easier to install and automate usage of Framewarc, despite the fact that it isn't a JavaScript library.
 
-As an npm package, Framewarc has no JavaScript functionality (so no `require("framewarc")`), but it does have a single piece of CLI functionality: The command `framewarc copy-into <path>` copies Framewarc's Arc source files (the arc/ directory) into the given file path. This can be combined with [Rainbow.js](https://github.com/arclanguage/rainbow-js)'s CLI functionality to build a host directory with Rainbow.js's core Arc libraries and Framewarc in its `lib/` directory: `rainbow-js-arc init-arc my-arc-host-dir/ && framewarc copy-into my-arc-host-dir/lib/framewarc/`. Once you have these files in place, keep in mind that you'll still need to run `(= fwarc-dir* "lib/framewarc/")` and `(load:+ fwarc-dir* "loadfirst.arc")` to load Framewarc.
+As an npm package, Framewarc has no JavaScript functionality (so no `require("framewarc")`), but it does have a single piece of CLI functionality: The command `framewarc copy-into <path>` copies Framewarc's Arc source files (the arc/ directory) into the directory at the given file path. This can be combined with [Rainbow.js](https://github.com/arclanguage/rainbow-js)'s CLI functionality to build a host directory with Rainbow.js's core Arc libraries and Framewarc in its `lib/` directory: `rainbow-js-arc init-arc my-arc-host-dir/ && framewarc copy-into my-arc-host-dir/lib/framewarc/`. Once you have these files in place, keep in mind that you'll still need to run `(= fwarc-dir* "lib/framewarc/")` and `(load:+ fwarc-dir* "loadfirst.arc")` to load Framewarc.
 
-If you'd like to invoke the `framewarc copy-into <url>` command yourself from the command line, install framewarc globally:
+If you'd like to invoke the `framewarc copy-into <path>` command yourself from the command line, install framewarc globally:
 
 ```bash
 npm install --global framewarc
